@@ -11,6 +11,7 @@ Installation
 git clone  https://github.com/aleonasmi/Google_Search_Validation
 
 Execution
+
 Change directories to the location of the project you cloned
 Execute in command prompt: 
 mvn clean test -Dkwd="quality assurance" -DlinkToValidate="http://en.wikipedia.org/wiki/Quality_assurance" -DexpectedAmount="109000000"
