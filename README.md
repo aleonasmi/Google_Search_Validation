@@ -17,6 +17,7 @@ Execute in command prompt:
 mvn clean test -Dkwd="quality assurance" -DlinkToValidate="http://en.wikipedia.org/wiki/Quality_assurance" -DexpectedAmount="109000000"
 
 Report
+
 File report_01.txt is located in [your_path]\Google_Search_Validation\src\test\reports
 
 
