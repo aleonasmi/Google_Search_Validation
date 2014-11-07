@@ -1,0 +1,18 @@
+# ===================================================================
+# Username:      [Elena Smirnova]
+# Email:         [smielena24@gmail.com]
+# Date:          [11/04/2014 15:00:00]
+#
+# OS:            [Windows 8]
+# Java version:  [1.7.0_55]
+#
+# Script name:   [Google_Search_Validation]
+# Description:   [Google Search and link validation]
+# Output file:   [report_01.txt]
+# ===================================================================
+Result: Pass 
+01. Total amount of returns 105000000 matches with expected 105000000
+02. Link (#1) is valid  satus 200
+03. Page title - Quality assurance - Wikipedia, the free encyclopedia
+04. Page size - 71 KB 
+# ===================================================================
