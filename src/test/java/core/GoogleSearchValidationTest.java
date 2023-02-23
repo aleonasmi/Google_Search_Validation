@@ -34,7 +34,7 @@ public class GoogleSearchValidationTest {
 	private String kwd = System.getProperty("kwd");	// Command line argument  
 	private String expectedAmount = System.getProperty("expectedAmount");// Command line argument expected total amount
 	private String linkToValidate = System.getProperty("linkToValidate");// Command line argument link for validation
-	private final static int STATUSCODE = 200;// Status code of page
+	private final static int STATUSCODE = 301;// Status code of page
 	private int errorCounter = 0; // Counter of failed steps
 	
 	// Rule allows to continue test after assertion failure on some of the steps		
@@ -70,7 +70,7 @@ public class GoogleSearchValidationTest {
         // Submit the form
         element.submit();
         // Get the result statistics
-		String text = driver.findElement(By.id("resultStats")).getText();
+		String text = driver.findElement(By.id("result-stats")).getText();
 		// Split words in array of strings
 		String[] words = text.split("\\s");
 		// Remove commas form the result statistics
@@ -110,7 +110,7 @@ public class GoogleSearchValidationTest {
 			assertEquals(linkToValidate, driver.getCurrentUrl());
 			linkValidation = "02. Link (#" + validLinkNumber + ") is valid ";
 							
-			// Verify Web Page status code (Must be 200)
+			// Verify Web Page status code (Must be 301)
 			try{
 				assertEquals(STATUSCODE, connection.getResponseCode());
 				CountingInputStream counter = new CountingInputStream(connection.getInputStream());
@@ -139,9 +139,9 @@ public class GoogleSearchValidationTest {
 		// Write testing results in a report file 
 		try {
 			String header = "# ===================================================================" + "\r\n"
-					+ "# Username:      [Elena Smirnova]" + "\r\n" + "# Email:         [smielena24@gmail.com]" + "\r\n" +
-					"# Date:          [11/04/2014 15:00:00]" + "\r\n" + "#" + "\r\n" + "# OS:            [Windows 8]" +
-					"\r\n" + "# Java version:  [1.7.0_55]" + "\r\n" + "#" + "\r\n" + "# Script name:   [Google_Search_Validation]" +
+					+ "# Username:      [smi]" + "\r\n" + "# Email:         [test@gmail.com]" + "\r\n" +
+					"# Date:          [02/23/2023 15:00:00]" + "\r\n" + "#" + "\r\n" + "# OS:            [MacOS]" +
+					"\r\n" + "#" + "\r\n" + "# Script name:   [Google_Search_Validation]" +
 					"\r\n" + "# Description:   [Google Search and link validation]" + "\r\n" + "# Output file:   [report_01.txt]"
 					+ "\r\n" + "# ===================================================================" + "\r\n";
 
